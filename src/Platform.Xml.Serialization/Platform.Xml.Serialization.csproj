@@ -1,34 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFrameworks>net461;net6.0</TargetFrameworks>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CBB73076-7381-4FDD-907F-7097A8AB04E6}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>
-    </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>Platform.Xml.Serialization</AssemblyName>
     <AssemblyOriginatorKeyFile>platform.snk</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
-    <RootNamespace>Platform.Xml.Serialization</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -43,40 +28,27 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
     <NoWarn>
     </NoWarn>
-    <Optimize>false</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>TRACE</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
@@ -84,156 +56,32 @@
     <NoStdLib>false</NoStdLib>
     <NoWarn>
     </NoWarn>
-    <Optimize>true</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
+    <Reference Update="System">
       <Name>System</Name>
       <HintPath>..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data">
+    <Reference Update="System.Data">
       <Name>System.Data</Name>
       <HintPath>..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Data.dll</HintPath>
     </Reference>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xml">
+    <Reference Update="System.Xml">
       <Name>System.XML</Name>
       <HintPath>..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.XML.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractGetterSetter.cs" />
-    <Compile Include="AbstractXmlConfigurationSectionHandler.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CachingXmlSerializerFactory.cs" />
-    <Compile Include="ColorSerializer.cs" />
-    <Compile Include="FieldGetterSetter.cs" />
-    <Compile Include="GuidSerializer.cs" />
-    <Compile Include="IGetterSetter.cs" />
-    <Compile Include="IVariableSubstitutor.cs" />
-    <Compile Include="IXmlDeserializationStartListener.cs" />
-    <Compile Include="IXmlListElementDynamicTypeProvider.cs" />
-    <Compile Include="IXmlSerializationEndListener.cs" />
-    <Compile Include="IXmlSerializationShouldSerializeProvider.cs" />
-    <Compile Include="IXmlSerializationStartListener.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexTypeTypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="PropertyGetterSetter.cs" />
-    <Compile Include="SerializeMembers.cs" />
-    <Compile Include="TextResources.Designer.cs">
+    <Compile Update="TextResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TextResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="XmlApproachAttribute.cs" />
-    <Compile Include="XmlAttributeAttribute.cs" />
-    <Compile Include="XmlCDataAttribute.cs" />
-    <Compile Include="XmlConfigurationBlockSectionHandler.cs" />
-    <Compile Include="DateTimeTypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DictionaryTypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="EnumTypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IXmlDeserializationEndListener.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ISerializationUnhandledMarkupListener.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IXmlPolymorphicTypeProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IXmlSerializerSerializable.cs" />
-    <Compile Include="ListTypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="RuntimeTypeTypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SerializationMemberInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SerializationParameters.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SerializationContext.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SerializerOptions.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="StandardTypeSerializerFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="StringableTypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TypeSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TypeSerializerCache.cs" />
-    <Compile Include="TypeSerializerFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TypeSerializerWithSimpleTextSupport.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlDateTimeFormatAttribute.cs" />
-    <Compile Include="XmlDictionaryElementTypeAttribute.cs" />
-    <Compile Include="XmlElementAttribute.cs" />
-    <Compile Include="XmlEnvironmentVariableSubstitutor.cs" />
-    <Compile Include="XmlExcludeAttribute.cs" />
-    <Compile Include="XmlFormatAttribute.cs" />
-    <Compile Include="XmlListElementAttribute.cs" />
-    <Compile Include="XmlListElementDynamicTypeProviderAttribute.cs" />
-    <Compile Include="XmlNodeNodeTypeSerializer.cs" />
-    <Compile Include="XmlPolymorphicTypeAttribute.cs" />
-    <Compile Include="XmlReaderHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlSerializationAttribute.cs" />
-    <Compile Include="XmlSerializeBaseAttribute.cs" />
-    <Compile Include="XmlSerializedObjectLoader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlSerializeEnumAsIntAttribute.cs" />
-    <Compile Include="XmlSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlSerializerException.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlSerializerFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlSerializerNamespaces.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlTextAttribute.cs" />
-    <Compile Include="XmlTreatAsNullIfEmptyAttribute.cs" />
-    <Compile Include="XmlTypeSerializerTypeAttribute.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XmlVariableSubstitutionAttribute.cs" />
-    <Compile Include="XmlVerifyRuntimeTypeAttribute.cs" />
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -264,26 +112,31 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TextResources.resx">
+    <EmbeddedResource Update="TextResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TextResources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Platform\Platform.csproj">
-      <Project>{31199c34-a7f0-4d69-b2cf-e9ce05262618}</Project>
-      <Name>Platform</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\Platform\Platform.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="platform.snk" />
+    <Compile Remove="Attributes\XmlSerializationAttribute.cs" />
+    <Compile Remove="Attributes\XmlTypeSerializerTypeAttribute.cs" />
+    <Compile Remove="ISerializationStateListener.cs" />
+    <Compile Remove="ISerializationUnknownNodeListener.cs" />
+    <Compile Remove="TypeSerializers\AnyTypeTypeSerializer.cs" />
+    <Compile Remove="TypeSerializers\ComplexTypeTypeSerializer.cs" />
+    <Compile Remove="TypeSerializers\DateTimeTypeSerializer.cs" />
+    <Compile Remove="TypeSerializers\DictionaryTypeSerializer.cs" />
+    <Compile Remove="TypeSerializers\EnumTypeSerializer.cs" />
+    <Compile Remove="TypeSerializers\ListTypeSerializer.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.336902">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>
